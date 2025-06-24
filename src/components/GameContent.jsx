@@ -9,15 +9,15 @@ const GameContent = () => {
   const [clicked, setClicked] = useState(false);
   const [selected, setSelected] = useState(null);
   const [showResult, setShowResult] = useState(false);
-  const[qId, setQid] = useState(currentGame)
+ 
 
 
   const handleNext = () => {
     setCurrentGame(currentGame + 1);
     setQuestionStarted(true);
-    if(qId != currentGame){
-        setClicked(false)
-    }
+    setClicked(false)
+   
+  
   };
 
   const handlePrev = () => {
@@ -93,7 +93,6 @@ const GameContent = () => {
     }
       setSelected(id)
     setClicked(true);
-    setQid(currentGame)
   };
 
   useEffect(() => {
